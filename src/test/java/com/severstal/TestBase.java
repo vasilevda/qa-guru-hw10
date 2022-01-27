@@ -33,9 +33,7 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
 
-        System.out.println(System.getProperty("FOOOOOOOOOOOOOOOOOOOR COOOOOOOOOOOOOOODE"));
-        System.out.println(System.getProperty("browser"));
-        System.out.println(System.getProperty("version"));
+        System.out.println(System.getProperty(cfg.hostname()));
     }
 
     @AfterEach
