@@ -8,6 +8,10 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
+/**
+ * @author da-vasilev@ya.ya
+ * <b>Это просто описание</b>
+ */
 public class PracticeFormPage {
 
     @Step("Заполнить поля на странице Demoqa")
