@@ -3,9 +3,7 @@ package com.severstal;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.severstal.helpers.Attachments;
-import com.severstal.helpers.ServerConfig;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -18,13 +16,10 @@ public class TestBase {
     static void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
-//        ServerConfig cfg = ConfigFactory.create(ServerConfig.class);
-
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browser = System.getProperty("browser");
         Configuration.browserVersion = System.getProperty("browserVersion");
-//        Configuration.remote = cfg.hostname();
         Configuration.remote =
                 String.format("https://%s:%s@selenoid.autotests.cloud/wd/hub",
                         System.getProperty("login"), System.getProperty("password"));
