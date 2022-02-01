@@ -2,12 +2,14 @@ package com.severstal;
 
 import com.github.javafaker.Faker;
 import com.severstal.pages.PracticeFormPage;
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.open;
 
+@Owner("da-vasilev@ya.ya")
 public class DemoqaFormTest extends TestBase{
     private static final Faker faker = new Faker();
     private static final TestData testData = new TestData();
