@@ -25,8 +25,8 @@ public class PracticeFormPage {
         $x("//label[contains(., 'Sports')]").click();
 //        $("#uploadPicture").uploadFromClasspath("starPhoto.jpg");
         $("#currentAddress").setValue(testData.getCurrentAddress());
-        $("#state #react-select-3-input").setValue("NCR").pressEnter();
-        $("#city #react-select-4-input").setValue("Delhi").pressEnter();
+        $("#state #react-select-3-input").setValue("Haryana").pressEnter();
+        $("#city #react-select-4-input").setValue("Panipat").pressEnter();
         $("#submit").scrollTo();
         $("#submit").click();
         return this;
@@ -47,7 +47,7 @@ public class PracticeFormPage {
                 text("English"),
                 text("Sports"),
                 text(testData.getCurrentAddress()),
-                text("NCR Delhi")
+                text("Haryana Panipat")
         );
         return this;
     }
