@@ -19,12 +19,13 @@ public class TestBase {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         ServerConfig cfg = ConfigFactory.create(ServerConfig.class);
+        System.out.println(cfg.host());
 
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browser = System.getProperty("browser");
         Configuration.browserVersion = System.getProperty("browserVersion");
-        Configuration.remote = cfg.hostname();
+        Configuration.remote = cfg.host();
 //        Configuration.remote =
 //                String.format("https://%s:%s@%s",
 //                        System.getProperty("login"),

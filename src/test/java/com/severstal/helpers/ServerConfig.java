@@ -4,7 +4,7 @@ import org.aeonbits.owner.Config;
 
 public interface ServerConfig extends Config {
     @Key("https.server.host")
-    String hostname();
+    String host();
 
     @Key("server.host.login")
     String login();
