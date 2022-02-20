@@ -24,12 +24,12 @@ public class TestBase {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browser = System.getProperty("browser");
         Configuration.browserVersion = System.getProperty("browserVersion");
-//        Configuration.remote = cfg.host();
-        Configuration.remote =
-                String.format("https://%s:%s@%s",
-                       cfg.login(),
-                       cfg.password(),
-                       cfg.host());
+        Configuration.remote = cfg.host();
+//        Configuration.remote =
+//                String.format("https://%s:%s@%s",
+//                       cfg.login(),
+//                       cfg.password(),
+//                       cfg.host());
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
